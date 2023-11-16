@@ -10,7 +10,7 @@ import math
 
 # [0] ATHLETICISM = 0.15  [1] FOODOUT = 0.1   [2] ENTERTAINMENT = 0.15
 # [3] RELATIONSHIP = 0.2  [4] RELIGION = 0.2  [5] POLITICS
-WEIGHT = [0.15, 0.1, 0.15, 0.2, 0.2, 0.2]
+WEIGHT = (0.15, 0.1, 0.15, 0.2, 0.2, 0.2)
 
 # Create tuples for two people, call match() to determine probability, output results
 def main():
@@ -26,8 +26,10 @@ def main():
 def match(p1, p2):
   match = 0
   # match for athletic, foodOut, entertainmentOut, seriousRelationship
-  for i in range(4):
-    match += rate(p1[i], p2[i]) * WEIGHT[i]
+  match += rate(p1[0], p2[0]) * WEIGHT[0]
+  match += rate(p1[1], p2[1]) * WEIGHT[1]
+  match += rate(p1[2], p2[2]) * WEIGHT[2]
+  match += rate(p1[3], p2[3]) * WEIGHT[3]
 
  # match for religion
   if p1[4] >= 8 or p2[4] >= 8:

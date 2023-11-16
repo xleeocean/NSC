@@ -3,20 +3,21 @@
  * A program that calls functions to do console-based plotting of curves/lines
  * in quadrants I and II, but sideways.
  * While each function calculate y as below:
- * - plotXSquared: y = x*x 
- * - plotNegXSquaredPlus20: y = |x|+1 
+ * - plotXSquared: y = x*x
+ * - plotNegXSquaredPlus20: y = |x|+1
  * - plotAbsXPlus1: y = -(x*x)+20
  * - plotSinWave: y = 20sin(.5x)+20
  *
  * @author: Alice Li
  * @date: 10/18/2023
  */
+
 public class SidePlot{
-    // Global variables 
+    // Global variables
     static String PLOT_CHAR = "o";
     static int minX;
     static int maxX;
-    
+
     // Main function to call other functions by arguments
     public static void main(String args[]) {
         plotXSquared(-6,6);
@@ -24,8 +25,8 @@ public class SidePlot{
         plotNegXSquaredPlus20(-4,4);
         plotSinWave(-9,9);
     }
-    
-    // Plot where y = x*x 
+
+    // Plot where y = x*x
     public static void plotXSquared(int minX, int maxX) {
         System.out.println("Sideways Plot");
         System.out.println("y = x*x where "+ minX + "<=x<=" + maxX);
@@ -39,7 +40,7 @@ public class SidePlot{
                         System.out.print("+");
                     } else {
                         System.out.print("-");
-                    }  
+                    }
                 }
             }
             else{
@@ -50,15 +51,15 @@ public class SidePlot{
                         System.out.print("|");
                     } else {
                         System.out.print(" ");
-                    }  
+                    }
                 }
             }
             System.out.println();
         }
         System.out.println("");
     }
-    
-    // Plot where y = |x|+1 
+
+    // Plot where y = |x|+1
     public static void plotAbsXPlus1(int minX, int maxX) {
         System.out.println("Sideways Plot");
         System.out.println("y = |x|+1, where "+ minX + "<=x<=" + maxX);
@@ -72,7 +73,7 @@ public class SidePlot{
                         System.out.print("+");
                     } else {
                         System.out.print("-");
-                    }  
+                    }
                 }
             }
             else{
@@ -83,14 +84,14 @@ public class SidePlot{
                         System.out.print("|");
                     } else {
                         System.out.print(" ");
-                    }  
+                    }
                 }
             }
             System.out.println();
         }
         System.out.println("");
     }
-    
+
     // Plot where y = -(x*x)+20
     public static void plotNegXSquaredPlus20(int minX, int maxX) {
         System.out.println("Sideways Plot");
@@ -105,7 +106,7 @@ public class SidePlot{
                         System.out.print("+");
                     } else {
                         System.out.print("-");
-                    }  
+                    }
                 }
             }
             else{
@@ -116,14 +117,14 @@ public class SidePlot{
                         System.out.print("|");
                     } else {
                         System.out.print(" ");
-                    }  
+                    }
                 }
             }
             System.out.println();
         }
         System.out.println("");
     }
-    
+
     // Plot where y = 20sin(.5x)+20
     public static void plotSinWave(int minX, int maxX) {
         System.out.println("Sideways Plot");
@@ -138,7 +139,7 @@ public class SidePlot{
                         System.out.print("+");
                     } else {
                         System.out.print("-");
-                    }  
+                    }
                 }
             }
             else{
@@ -149,7 +150,7 @@ public class SidePlot{
                         System.out.print("|");
                     } else {
                         System.out.print(" ");
-                    }  
+                    }
                 }
             }
             System.out.println();
@@ -157,4 +158,4 @@ public class SidePlot{
         System.out.println("");
     }
 }
-     
+
